@@ -37,6 +37,18 @@ const searchIndex = (arq, id) => {
     return index
 }
 
+const alterar= (arq, payload)=>{
+    const index = searchIndex(arq, payload.id)
+    if (index > -1) {
+        const content = read(arq)
+        content[index] = payload
+        write(arq, content)
+        return "alterado com sucesso"
+    }
+    return "não encontardo"
+
+}
+
 const remove = (arq, id) => {
     const index = searchIndex(arq, id)
     if (index > -1) {
@@ -53,4 +65,5 @@ module.exports = {
     save,
     read,
     remove,
+    alterar,
 }

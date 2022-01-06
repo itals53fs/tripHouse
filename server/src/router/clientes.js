@@ -43,26 +43,21 @@ clientes.post('/cadastrar-cliente', (req, res)=>{
 clientes.put('/alterar-cliente', (req , res)=>{
     try{
         const {id, name, endereco, email, cpf, telefone} = req.body;
-        const clientes = arq.getAll('clientes')
-        const itemselecionado = clientes.findIndex(element => element.id === id)
-    
-        if(itemselecionado>-1){
-            clientes[itemselecionado] = {id, name, endereco, email, cpf, telefone}
-            res.send({messege: "alterado com sucesso"})
-            arq.save('clientes', clientes)
-        }
-        else{
-            res.status(404).send({messege:"Não encontardo"})
-        }
+        const e = arq.alterar('clientes', {id, name, endereco, email, cpf, telefone})
+        return res.send(e)
     }catch(e){
         res.send(e)
     }
 })
 
 clientes.delete('/delete-cliente/:id', (req, res)=>{
-    const {id} = req.params
-    const resp = arq.remove('clientes', id)
-    res.send(resp)
+    try{
+        const {id} = req.params
+        const resp = arq.remove('clientes', id)
+        res.send(resp)
+    }catch(e){
+        res.send(e)
+    }
 })
 
 module.exports = clientes
