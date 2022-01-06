@@ -10,7 +10,8 @@ const options = {
 }
 app.use(router.colaboradores,
     router.clientes,
-    router.veiculos)
+    router.veiculos,
+    router.reservas)
     
 app.use(express.static(__dirname+'/'))
 
