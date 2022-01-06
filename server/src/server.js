@@ -9,7 +9,7 @@ const options = {
     key: fs.readFileSync('certificates/key.pem'),
     cert: fs.readFileSync('certificates/cert.pem')
 }
-app.use(router.colaboradores)
+app.use(router.colaboradores, router.clientes)
 app.use(express.static(__dirname+'/'))
 
 
