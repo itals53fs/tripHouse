@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+    
+}
+
+:root {
+    --primary-cor: #1CAE81;
+    --white: #FFF;
+    --title: #454545;
+    --subtitle: #9E9E9E;
+    --bg: #e5e5e5
+  }
+
+  .container{
+    width: 1440px;
+    background-color: var(--bg);
+  }
+
+  .container-dash{
+     
+     width: 90%;
+     margin: 0 auto;
+  }

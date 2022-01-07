@@ -1,0 +1,114 @@
+.login-container{
+    background-color: var(--primary-cor);
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-login{
+    background-color: var(--white);
+    padding: 4rem 1.2rem ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    height: 50%;
+}
+
+.card-login h1{
+    color: var(--primary-cor);
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 54px;
+    line-height: 72px;
+}
+
+
+/* Input  */
+.floating-form {
+    position: relative;
+}
+
+.floating-form input{
+    border: 2px solid var(--primary-cor);
+    background: #FFFFFF;
+    border-radius: 4px;
+    color: #2CBA8D;
+    width: 386px;
+
+    font-size: 20px;
+    padding: 6px;
+}
+
+.floating-form label{ color: tomato;}
+
+.floating-form .form-control {
+    background: transparent;
+    position: relative;
+    z-index: 50;
+}
+.floating-form .form-control:focus, .floating-form .form-control:active, .floating-form .form-control:valid {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.floating-form .form-control:focus + label, .floating-form .form-control:active + label, .floating-form .form-control:valid + label {
+    transform: translateY(-40%);
+    top: -2px;
+    z-index: 100;
+    font-size: 12px;
+}
+.floating-form label {
+    position: absolute;
+    top: 50%;
+   /* bootstrap > input > padding size */
+    left: 0.75rem;
+    z-index: 1;
+    font-size: 14px;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+    background: #fff;
+    color: #afafaf;
+}
+.floating-form textarea + label {
+    top: 1.275rem;
+}
+
+
+.btn-login{
+display: flex;
+align-items: center;
+justify-content: center;
+
+width: 386px;
+height: 53px;
+left: 526px;
+top: 632px;
+
+background: #1CAE81;
+border-radius: 4px;
+
+color: var(--white);
+font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 72px;
+
+cursor: pointer;
+
+transition: 0.2s ease-in-out;
+}
+
+.btn-login:hover{
+    background-color: tomato;
+}
+
+.btn-login a{
+    color: #FFF;
+    text-decoration: none;
+}
