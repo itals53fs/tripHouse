@@ -1,0 +1,9 @@
+.page-selected{
+    background-color: var(--primary-cor);
+    color: #FFF;
+    width: 130px;
+    margin-top: 20px;
+    min-width: 130px;
+    padding: 8px 12px;
+    border-radius: 6px;
+}

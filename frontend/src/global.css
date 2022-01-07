@@ -21,6 +21,9 @@
   }
 
   .container-dash{
+    display: flex;  
+    flex-direction: column;
+    gap: 20px;
      
      width: 90%;
      margin: 0 auto;

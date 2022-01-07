@@ -4,6 +4,7 @@ import './global.css'
 
 import Login from './pages/Login'
 import Reservas from './pages/Reservas'
+import Colaboradores from './pages/Colaboradores'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
      <Routes>
        <Route path="/" element={<Login />} />
        <Route path="/reservas" element={<Reservas />} />
+       <Route path="/colaboradores" element={<Colaboradores />} />
      </Routes>
     </>
   );

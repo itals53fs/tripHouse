@@ -10,7 +10,7 @@ function Header() {
           <nav>
             <ul>
               <li>
-                <Link to="/">Reserva</Link>
+                <Link to="/reservas">Reserva</Link>
               </li>
               <li>
               <Link to="/">Clientes</Link>
@@ -19,7 +19,7 @@ function Header() {
               <Link to="/">Veiculos</Link>
               </li>
               <li>
-              <Link to="/">Colaboradores</Link>
+              <Link to="/colaboradores">Colaboradores</Link>
               </li>
             </ul>
           </nav>
