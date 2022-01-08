@@ -1,0 +1,31 @@
+.card-reerva-container{
+    width: 346px;
+    background-color: #FFF;
+    border-radius: 11px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-reserva-info{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.card-reserva-info  h4{
+    color: var(--subtitle);
+    font-weight: normal;
+}
+
+.card-reserva-info span{
+    font-weight: bold;
+    color: var(--title);
+}
+
+.card-reerva-status{
+    width: 54px;
+    height: 83px;
+    background-color: var(--primary-cor);
+    align-self: flex-end;
+    border-radius: 33px 0 11px 0;
+}

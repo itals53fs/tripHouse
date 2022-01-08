@@ -1,15 +1,5 @@
 [
   {
-    "id": "eebv6ch2o",
-    "name": "miguel",
-    "endereco": "A",
-    "email": "@",
-    "cpf": "123",
-    "telefone": "1234",
-    "login": "123",
-    "senha": "12ddd3"
-  },
-  {
     "id": "rah66msjf",
     "name": "miguel",
     "endereco": "A",
@@ -40,13 +30,33 @@
     "senha": "123"
   },
   {
-    "id": "ge82jqm66",
-    "name": "miguel",
-    "endereco": "A",
-    "email": "@",
-    "cpf": "123",
-    "telefone": "1234",
-    "login": "123",
-    "senha": "123"
+    "id": "33af0phce",
+    "name": "Ulisses Brandão",
+    "endereco": "rua 1 de março",
+    "email": "ulisses@ulisses.com",
+    "cpf": "123123",
+    "telefone": "3899884",
+    "login": "ulisses",
+    "senha": "123123"
+  },
+  {
+    "id": "47ivmrg2l",
+    "name": "Tales Felix",
+    "endereco": "Rua do serro",
+    "email": "tales@tales.com",
+    "cpf": "123415618",
+    "telefone": "31813186312",
+    "login": "tales",
+    "senha": "123321"
+  },
+  {
+    "id": "otjjfe7t7",
+    "name": "Gabriel Morais",
+    "endereco": "Rua diamantina",
+    "email": "gabriel@morais.com",
+    "cpf": "11111111111",
+    "telefone": "31831818",
+    "login": "sacola",
+    "senha": "147147"
   }
 ]

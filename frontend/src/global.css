@@ -12,11 +12,17 @@
     --white: #FFF;
     --title: #454545;
     --subtitle: #9E9E9E;
-    --bg: #e5e5e5
+    /* --bg: #e5e5e5; */
+    --bg: #E5E5E5;
+    --pink: #FF428F
   }
 
   .container{
     width: 1440px;
+ 
+  }
+
+  body{
     background-color: var(--bg);
   }
 
