@@ -30,9 +30,16 @@
 
 .header-container div nav ul li{ 
     transition: 0.2s ease-in-out;
+    padding: 6px 6px;
 }
 .header-container div nav ul li:hover{
     background: #2CBA8D;
     border-radius: 4px;
+    padding: 8px 12px;
+}
+
+.logout{
+    /* background-color: var(--pink) !important; */
+    background-color: #2CBA8D;
     padding: 6px 6px;
 }

@@ -9,14 +9,14 @@ import AlertModal from '../../components/Modal/Alert';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 
- const  Colaboradores = () => {
+ const  Veiculos = () => {
 
     const [data, setData] = useState([])
     const [values, setValues] = useState({})
     const [modal, setModal] = useState(false)
 
     const handleDelete = async (id) =>{
-        await axios.delete(`http://localhost:5050/delete-colaborador/${id}`).then( res => {
+        await axios.delete(`http://localhost:5050/delete-veiculo/${id}`).then( res => {
             alert('Deletado com sucesso')
             window.location.reload();
         }).catch( err => {
@@ -27,7 +27,7 @@ import { Link } from 'react-router-dom';
 
     useEffect(() => {
         async function loadData() {
-            await axios.get('http://localhost:5050/colaboradores').then(res => {
+            await axios.get('http://localhost:5050/veiculos').then(res => {
                 setData(res.data)
             }).catch(error => console.log('Ouve um erro', error))
         }
@@ -40,17 +40,17 @@ import { Link } from 'react-router-dom';
             <div className='.container' >
                 <div className='container-dash' >
                     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '20px'}}>
-                        <PageSelect text="Colaboradores" />
-                        <Link to={'/form/0'} className='btn-cadastro'>Cadastrar Colaborador</Link>
+                        <PageSelect text="Veiculos" />
+                        <Link to={'/form/2'} className='btn-cadastro'>Cadastrar Veiculo</Link>
                     </div>
                     <MaterialTable
                         title="Procure os colaboradores"
                         columns={[
                             { title: 'ID', field: 'id' },
                             { title: 'Nome', field: 'name' },
-                            { title: 'Endereço', field: 'endereco' },
-                            { title: 'Email', field: 'email' },
-                            { title: 'CPF', field: 'cpf', type: "numeric" },
+                            { title: 'Placa', field: 'placa' },
+                            { title: 'Situacao', field: 'situacao' },
+                            { title: 'data', field: 'data', type: "date" },
                         ]}
                         data={data}  
                         actions={[
@@ -73,7 +73,7 @@ import { Link } from 'react-router-dom';
                     {
                         modal === true ?
                         <AlertModal 
-                        type={0}
+                        type={1}
                         id={values.id}
                         name={values.name}
                         endereco={values.endereco}
@@ -93,4 +93,4 @@ import { Link } from 'react-router-dom';
     )
 }
 
-export default Colaboradores;
+export default Veiculos;
