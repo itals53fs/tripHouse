@@ -1,8 +1,9 @@
 const express = require('express')
 const router = require('./router/index')
-const https = require('http')
+const https = require('https')
 const fs = require('fs')
 const app = express()
+const app2 = express()
 const porta = 5050
 const cors = require('cors')
 const options = {
@@ -12,15 +13,15 @@ const options = {
 app.use(cors())
 app.use(router.colaboradores,
     router.clientes,
-    router.veiculos,
     router.reservas)
     
 app.use(express.static(__dirname+'/'))
-
-
-
 https
 .createServer(options,app).listen(porta, function () {
     console.log(`Rodando na porta ${porta}`)
 })
  
+
+app2.use(cors())
+app2.use(router.veiculos)
+app2.listen(5051, ()=>'rodando na 5051')

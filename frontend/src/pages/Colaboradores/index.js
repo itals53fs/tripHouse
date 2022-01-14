@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
     const [modal, setModal] = useState(false)
 
     const handleDelete = async (id) =>{
-        await axios.delete(`http://localhost:5050/delete-colaborador/${id}`).then( res => {
+        await axios.delete(`https://localhost:5050/delete-colaborador/${id}`).then( res => {
             alert('Deletado com sucesso')
             window.location.reload();
         }).catch( err => {
