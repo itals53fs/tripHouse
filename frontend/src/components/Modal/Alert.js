@@ -14,7 +14,7 @@ const Transition = forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const AlertModal = ({id, name, endereco, email, cpf, telefone, login, senha, modal, setModal = () =>{} }) => {
+const AlertModal = ({type, id, name, endereco, email, cpf, telefone, login, senha, modal, setModal = () =>{} }) => {
 
     const [open, setOpen] = useState(true);
 
@@ -41,11 +41,12 @@ const AlertModal = ({id, name, endereco, email, cpf, telefone, login, senha, mod
                 onClose={handleClose}
                 aria-describedby="alert-dialog-slide-description"
             >
-            <FormColaboradoreEdit eId={id} eName={name} eTelefone={telefone} eSenha={senha} eLogin={login} eEndereco={endereco} eEmail={email} eCpf={cpf} />
-            
+                {type === 0 ? <FormColaboradoreEdit eId={id} eName={name} eTelefone={telefone} eSenha={senha} eLogin={login} eEndereco={endereco} eEmail={email} eCpf={cpf} /> : null }
+                {type === 1 ? <FormColaboradoreEdit eId={id} eName={name} eTelefone={telefone} eSenha={senha} eLogin={login} eEndereco={endereco} eEmail={email} eCpf={cpf} /> : null }
+
                 <DialogActions>
-                    <Button onClick={handleClose}>Disagree</Button>
-                    <Button onClick={handleClose}>Agree</Button>
+                    <Button onClick={handleClose}>Cancelar</Button>
+                    {/* <Button onClick={handleClose}>Agree</Button> */}
                 </DialogActions>
             </Dialog>
         </div>

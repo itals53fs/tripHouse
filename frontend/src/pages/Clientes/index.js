@@ -9,14 +9,14 @@ import AlertModal from '../../components/Modal/Alert';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 
- const  Colaboradores = () => {
+ const  Clientes = () => {
 
     const [data, setData] = useState([])
     const [values, setValues] = useState({})
     const [modal, setModal] = useState(false)
 
     const handleDelete = async (id) =>{
-        await axios.delete(`https://localhost:5050/delete-colaborador/${id}`).then( res => {
+        await axios.delete(`http://localhost:5050/delete-cliente/${id}`).then( res => {
             alert('Deletado com sucesso')
             window.location.reload();
         }).catch( err => {
@@ -27,7 +27,7 @@ import { Link } from 'react-router-dom';
 
     useEffect(() => {
         async function loadData() {
-            await axios.get('https://localhost:5050/colaboradores').then(res => {
+            await axios.get('http://localhost:5050/clientes').then(res => {
                 setData(res.data)
             }).catch(error => console.log('Ouve um erro', error))
         }
@@ -40,8 +40,8 @@ import { Link } from 'react-router-dom';
             <div className='.container' >
                 <div className='container-dash' >
                     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '20px'}}>
-                        <PageSelect text="Colaboradores" />
-                        <Link to={'/form/0'} className='btn-cadastro'>Cadastrar Colaborador</Link>
+                        <PageSelect text="Clientes" />
+                        <Link to={'/form/1'} className='btn-cadastro'>Cadastrar Clientes</Link>
                     </div>
                     <MaterialTable
                         title="Procure os colaboradores"
@@ -73,7 +73,7 @@ import { Link } from 'react-router-dom';
                     {
                         modal === true ?
                         <AlertModal 
-                        type={0}
+                        type={1}
                         id={values.id}
                         name={values.name}
                         endereco={values.endereco}
@@ -93,4 +93,4 @@ import { Link } from 'react-router-dom';
     )
 }
 
-export default Colaboradores;
+export default Clientes;

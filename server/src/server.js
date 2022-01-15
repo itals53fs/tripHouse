@@ -23,5 +23,6 @@ https
  
 
 app2.use(cors())
-app2.use(router.veiculos)
+app2.use(router.veiculos, router.lgpd)
 app2.listen(5051, ()=>'rodando na 5051')
+
