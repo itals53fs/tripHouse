@@ -1,26 +1,27 @@
 [
   {
-    "id": "0o4o8i9el",
-    "name": "Miguel Oliveira",
-    "endereco": "A",
-    "email": "@",
-    "cpf": "123",
-    "telefone": "1234"
-  },
-  {
     "id": "af2e24a03",
-    "name": "miguel",
-    "endereco": "sssssA",
-    "email": "@",
-    "cpf": "123",
-    "telefone": "1234"
+    "name": "Arthur",
+    "endereco": "Vicente de Paula n° 42",
+    "email": "vicente@trip.com",
+    "cpf": "12398756321",
+    "telefone": "3531-1500"
   },
   {
+<<<<<<< HEAD
     "id": "au37p9i9m",
     "name": "Daniel ",
     "endereco": "Itaobim",
     "email": "daniel@neres.com",
     "cpf": "155155157",
     "telefone": "389985412"
+=======
+    "id": "jkko1g142",
+    "name": "Felipe",
+    "endereco": "Vicentina n° 636",
+    "email": "felipe@trip.com",
+    "cpf": "13553687421",
+    "telefone": "5695-5555"
+>>>>>>> efd17d8bd0b57c135fd11fe8c3cfb23d95522f68
   }
 ]
