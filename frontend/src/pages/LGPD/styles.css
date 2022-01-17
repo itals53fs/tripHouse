@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+header{
+    position: fixed;
+    background-color: #FFF;
+    z-index: 9999;
+    border-bottom: 2px solid var(--primary-cor);
 }
 
+.content-text{
+    padding-top: 130px !important;
+}
 .container {
     display: flex;
     justify-content: space-between;
@@ -81,4 +84,15 @@ h2 {
 .topicos {
     position: relative;
     left: -3px;
+}
+
+.backLogin{ 
+    text-align: center;
+    background-color: var(--primary-cor);
+    padding: 10px 0;
+}
+
+.backLogin a{
+    color: #FFF;
+    text-decoration: none;
 }

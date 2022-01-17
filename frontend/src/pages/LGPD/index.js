@@ -24,7 +24,9 @@ const LGPD = () =>{
         <div className='conteudo' >
 
          </div>
-         <Link to="/" >Voltar para Login</Link>
+         <div className='backLogin'>
+          <Link   to="/" >Voltar para Login</Link>
+         </div>
        </div>
     )
 }

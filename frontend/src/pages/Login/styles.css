@@ -112,3 +112,8 @@ transition: 0.2s ease-in-out;
     color: #FFF;
     text-decoration: none;
 }
+
+.card-login p a{
+    color: var(--primary-cor);
+    text-decoration: none;
+}

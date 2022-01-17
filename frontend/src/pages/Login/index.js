@@ -47,7 +47,7 @@ export default function Login() {
                         <label for="password">Password</label>
                     </div>
                 </form>
-
+                <p>Leia nossa <strong><Link to={'/lgpd'}>Política de Segurança da Informação</Link></strong></p>
                 <button onClick={handleLogin} className='btn-login' >Login</button>
                 {/* <button onClick={handleLogin} className='btn-login' ><Link to={'/reservas'} >Login</Link></button> */}
 
