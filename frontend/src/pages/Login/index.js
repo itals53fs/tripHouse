@@ -17,9 +17,10 @@ export default function Login() {
             password: password
         }
         await axios.post('https://localhost:5050/login', data).then(res => {
-            alert("Login realizado com sucesso!")
-            localStorage.setItem('login', 'admin')
-            window.location.href = "https://localhost:3000/reservas"
+            //alert("Login realizado com sucesso!")
+            console.log(res.data)
+            /* localStorage.setItem('login', 'admin')
+            window.location.href = "https://localhost:3000/reservas" */
         }).catch( err => console.log('Error',err ))
 
        /* if(email === 'admin@triphouse.com' && password === 'admin'){

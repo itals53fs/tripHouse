@@ -37,7 +37,7 @@ const search = (arq, id) => {
     return index
 }
 
-const alterar= (arq, payload)=>{
+const alterar = (arq, payload) => {
     const index = search(arq, payload.id)
     if (index > -1) {
         const content = read(arq)
@@ -59,11 +59,15 @@ const remove = (arq, id) => {
     }
     return "item não encontrado"
 }
-const confirme = (emailReq, passwordReq)=>{
-    const email = search('login', emailReq)
-    const password = search('login', passwordReq)
-    console.log('email', email)
-    return password !=-1 && email!= -1
+const confirme = (arq, payload) => {
+    const content = getAll(arq)
+    const user = content.find(element => element.login == payload.email)
+    if (user) {
+        if (user.senha == payload.password) {
+            return user
+        }
+    }
+    return 'usuário ou senha invlido'
 }
 module.exports = {
 
