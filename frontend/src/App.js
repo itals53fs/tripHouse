@@ -7,6 +7,7 @@ import Reservas from './pages/Reservas'
 import Colaboradores from './pages/Colaboradores'
 import Clientes from './pages/Clientes'
 import Veiculos from './pages/Veiculos'
+import LGPD from './pages/LGPD'
 
 
 import FormPage from './pages/Form'
@@ -21,6 +22,7 @@ const App = () => {
        <Route path="/colaboradores"   element={<Colaboradores />} />
        <Route path="/clientes"   element={<Clientes />} />
        <Route path="/veiculos"   element={<Veiculos />} />
+       <Route path="/lgpd"   element={<LGPD />} />
 
        <Route path="/form/:id"  element={<FormPage  />} />
        <Route path="/formedit/:id"  element={<FormEdit  />} />
