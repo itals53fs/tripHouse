@@ -7,7 +7,7 @@ lgpd.use(express.json({extends:true}))
 lgpd.get('/lgpd', (req, res)=>{
     //const data = arq.getAll('lgpd')
     res.send(`
-    <header class="container">
+    <header id="header-lgpd" class="container">
     <img src="https://images2.imgbox.com/ff/a2/4E7MqDc6_o.jpeg" alt="Logo" />
     <nav>
       <ul class="menu">
