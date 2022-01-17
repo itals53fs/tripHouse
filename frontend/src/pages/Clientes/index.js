@@ -73,15 +73,13 @@ import { Link } from 'react-router-dom';
                     {
                         modal === true ?
                         <AlertModal 
-                        type={1}
+                        type={2}
                         id={values.id}
                         name={values.name}
                         endereco={values.endereco}
                         email={values.email}
                         cpf={values.cpf}
                         telefone={values.telefone}
-                        login={values.login}
-                        senha={values.senha}
                         modal setModal={setModal} />
                         :
                         null

@@ -26,9 +26,9 @@ const FormVeiculos = () => {
     }
 
     const onsubmit = async () =>{
-        await axios.post('http://localhost:5050/cadastrar-veiculo',values).then( res => {
+        await axios.post('http://localhost:5051/cadastrar-veiculo',values).then( res => {
             alert('Cadastrado com sucesso')
-            window.location.href = "http://localhost:3000/veiculos"
+            window.location.href = "https://localhost:3000/veiculos"
         }).catch( err => console.log('Deu erro', err))
     }
 
@@ -36,33 +36,17 @@ const FormVeiculos = () => {
         <div  className="container-form-create">
             <form  className="form-create"  style={{ marginTop: 30 }} >
                 <h1>Veiculos</h1>
-                <div class="floating-form">
-                    <input onChange={handleChange} type="text" class="form-control" name="name" id="name" autocomplete="off" required />
-                    <label for="name">Nome</label>
+                <div style={{ marginTop: 30 }} class="floating-form">
+                    <input  onChange={handleChange} type="text" class="form-control" name="placa" id="placa" autocomplete="off" required />
+                    <label for="placa">Placa</label>
                 </div>
                 <div style={{ marginTop: 30 }} class="floating-form">
-                    <input onChange={handleChange} type="email" class="form-control" name="email" id="email" autocomplete="off" required />
-                    <label for="email">Email</label>
+                    <input  onChange={handleChange} type="text" class="form-control" name="situacao" id="situacao" autocomplete="off" required />
+                    <label for="situacao">Situação</label>
                 </div>
                 <div style={{ marginTop: 30 }} class="floating-form">
-                    <input onChange={handleChange} type="text" class="form-control" name="endereco" id="endereco" autocomplete="off" required />
-                    <label for="endereco">Endereço</label>
-                </div>
-                <div style={{ marginTop: 30 }} class="floating-form">
-                    <input onChange={handleChange} type="text" class="form-control" name="cpf" id="cpf" autocomplete="off" required />
-                    <label for="cpf">CPF</label>
-                </div>
-                <div style={{ marginTop: 30 }} class="floating-form">
-                    <input onChange={handleChange} type="text" class="form-control" name="telefone" id="telefone" autocomplete="off" required />
-                    <label for="telefone">Telefone</label>
-                </div>
-                <div style={{ marginTop: 30 }} class="floating-form">
-                    <input onChange={handleChange} type="text" class="form-control" name="login" id="login" autocomplete="off" required />
-                    <label for="login">Login</label>
-                </div>
-                <div style={{ marginTop: 30 }} class="floating-form">
-                    <input onChange={handleChange} type="password" class="form-control" name="senha"  id="password" autocomplete="off" required />
-                    <label for="senha">Senha</label>
+                    <input  onChange={handleChange} type="text" class="form-control" name="data" id="data" autocomplete="off" required />
+                    <label for="data">Data</label>
                 </div>
 
                 <button style={{ marginTop: 30 }}  type="button" className='btn-login' onClick={onsubmit}  >Cadastrar</button>

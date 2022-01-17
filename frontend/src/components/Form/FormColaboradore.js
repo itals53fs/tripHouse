@@ -26,9 +26,9 @@ const FormColaboradores = () => {
     }
 
     const onsubmit = async () =>{
-        await axios.post('http://localhost:5050/cadastrar-cobaborador',values).then( res => {
+        await axios.post('https://localhost:5050/cadastrar-cobaborador',values).then( res => {
             alert('Cadastrado com sucesso')
-            window.location.href = "http://localhost:3000/colaboradores"
+            window.location.href = "https://localhost:3000/colaboradores"
         }).catch( err => console.log('Deu erro', err))
     }
 

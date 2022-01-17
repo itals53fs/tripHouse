@@ -59,10 +59,10 @@ const remove = (arq, id) => {
     }
     return "item não encontrado"
 }
-const confirme = (email, password)=>{
-    const email = search('login', password)
-    const password = search('login', email)
-
+const confirme = (emailReq, passwordReq)=>{
+    const email = search('login', emailReq)
+    const password = search('login', passwordReq)
+    console.log('email', email)
     return password !=-1 && email!= -1
 }
 module.exports = {

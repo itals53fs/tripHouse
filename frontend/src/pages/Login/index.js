@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import './styles.css'
-
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 export default function Login() {
@@ -8,19 +8,29 @@ export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleLogin = () =>{
+    const handleLogin = async () =>{
        if(email === '' && password === ''){
            alert('Preencha todos os campos para realizar o login!')
        }else{
-        if(email === 'admin@triphouse.com' && password === 'admin'){
+        let data ={
+            email: email,
+            password: password
+        }
+        await axios.post('https://localhost:5050/login', data).then(res => {
+            alert("Login realizado com sucesso!")
+            localStorage.setItem('login', 'admin')
+            window.location.href = "https://localhost:3000/reservas"
+        }).catch( err => console.log('Error',err ))
+
+       /* if(email === 'admin@triphouse.com' && password === 'admin'){
             localStorage.setItem('login', 'admin')
             window.location.href = "http://localhost:3000/reservas"
         }
         else{
             localStorage.setItem('login', 'colaborador')
             window.location.href = "http://localhost:3000/reservas"
-        }
-       }
+        }*/
+       } 
     }
 
     return (

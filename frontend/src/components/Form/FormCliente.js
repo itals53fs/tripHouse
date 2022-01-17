@@ -26,15 +26,16 @@ const FormCliente = () => {
     }
 
     const onsubmit = async () =>{
-        await axios.post('http://localhost:5050/cadastrar-cliente',values).then( res => {
+        await axios.post('https://localhost:5050/cadastrar-cliente',values).then( res => {
             alert('Cadastrado com sucesso')
-            window.location.href = "http://localhost:3000/clientes"
+            window.location.href = "https://localhost:3000/clientes"
         }).catch( err => console.log('Deu erro', err))
     }
 
     return (
         <div  className="container-form-create">
             <form  className="form-create"  style={{ marginTop: 30 }} >
+                <h1>Cadastrar Clietne</h1>
                 <div class="floating-form">
                     <input onChange={handleChange} type="text" class="form-control" name="name" id="name" autocomplete="off" required />
                     <label for="name">Nome</label>
@@ -55,15 +56,6 @@ const FormCliente = () => {
                     <input onChange={handleChange} type="text" class="form-control" name="telefone" id="telefone" autocomplete="off" required />
                     <label for="telefone">Telefone</label>
                 </div>
-                <div style={{ marginTop: 30 }} class="floating-form">
-                    <input onChange={handleChange} type="text" class="form-control" name="login" id="login" autocomplete="off" required />
-                    <label for="login">Login</label>
-                </div>
-                <div style={{ marginTop: 30 }} class="floating-form">
-                    <input onChange={handleChange} type="password" class="form-control" name="senha"  id="password" autocomplete="off" required />
-                    <label for="senha">Senha</label>
-                </div>
-
                 <button style={{ marginTop: 30 }}  type="button" className='btn-login' onClick={onsubmit}  >Cadastrar</button>
             </form>
 

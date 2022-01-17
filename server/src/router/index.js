@@ -3,6 +3,7 @@ const clientes = require('./clientes')
 const veiculos = require('./veiculos')
 const reservas = require('./reservas')
 const lgpd = require('./lgpd')
+const login = require('./login')
 
 module.exports={
     colaboradores,
@@ -10,4 +11,6 @@ module.exports={
     veiculos,
     reservas,
     lgpd,
+    login,
+    
 }

@@ -9,9 +9,12 @@ login.post('/login', (req, res)=>{
     try{
         const {email, password} = req.body;
         const resp = arq.confirme('login',{email, password})
+        // console.log(resp)
         res. send(resp)
     }catch(e){
         res.send(e)
     }
 
 })
+
+module.exports = login

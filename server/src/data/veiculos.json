@@ -2,7 +2,7 @@
   {
     "id": "mhlsit5sb",
     "placa": "miguel",
-    "situacao": "A",
+    "situacao": "Disponivel",
     "data": "@ss"
   },
   {
@@ -34,5 +34,11 @@
     "placa": "miguel",
     "situacao": "A",
     "data": "@ss"
+  },
+  {
+    "id": "36o46ug5i",
+    "placa": "KGC5050",
+    "situacao": "Disponivel",
+    "data": "sei la"
   }
 ]

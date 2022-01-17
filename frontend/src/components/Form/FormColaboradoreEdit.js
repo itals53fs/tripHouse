@@ -28,9 +28,9 @@ const FormColaboradoreEdit = ({eId, eName, eEndereco, eEmail, eCpf, eTelefone, e
 
     const onsubmit = async () =>{
         console.log(values)
-        await axios.put('http://localhost:5050/alterar-colaborador',values).then( res => {
+        await axios.put('https://localhost:5050/alterar-colaborador',values).then( res => {
             alert('Atualizado com sucesso')
-            window.location.href = "http://localhost:3000/colaboradores"
+            window.location.href = "https://localhost:3000/colaboradores"
         }).catch( err => {
             alert('Não foi possivel atualizar')
             console.log('Deu erro', err)

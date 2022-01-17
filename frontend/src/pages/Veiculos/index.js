@@ -29,6 +29,7 @@ import { Link } from 'react-router-dom';
         async function loadData() {
             await axios.get('http://localhost:5051/veiculos').then(res => {
                 setData(res.data)
+                console.log(data)
             }).catch(error => console.log('Ouve um erro', error))
         }
         loadData()
@@ -75,13 +76,9 @@ import { Link } from 'react-router-dom';
                         <AlertModal 
                         type={1}
                         id={values.id}
-                        name={values.name}
-                        endereco={values.endereco}
-                        email={values.email}
-                        cpf={values.cpf}
-                        telefone={values.telefone}
-                        login={values.login}
-                        senha={values.senha}
+                        placa={values.placa}
+                        situacao={values.situacao}
+                        data={values.data}
                         modal setModal={setModal} />
                         :
                         null

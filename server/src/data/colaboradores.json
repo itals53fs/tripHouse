@@ -1,17 +1,7 @@
 [
   {
-    "id": "fi5d0t3ir",
-    "name": "miguel",
-    "endereco": "A",
-    "email": "@",
-    "cpf": "123",
-    "telefone": "1234",
-    "login": "123",
-    "senha": "123"
-  },
-  {
     "id": "b7pc64c9g",
-    "name": "miguel",
+    "name": "Miguel Santos",
     "endereco": "A",
     "email": "@",
     "cpf": "123",
@@ -48,5 +38,15 @@
     "telefone": "31831818",
     "login": "sacola",
     "senha": "147147"
+  },
+  {
+    "id": "d2928rf17",
+    "name": "Ale Apenas",
+    "endereco": "Rua de algum lugar",
+    "email": "ale@apenas.com",
+    "cpf": "12345678998",
+    "telefone": "38997489977",
+    "login": "ale",
+    "senha": "123"
   }
 ]
