@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
     const [modal, setModal] = useState(false)
 
     const handleDelete = async (id) =>{
-        await axios.delete(`http://localhost:5050/delete-veiculo/${id}`).then( res => {
+        await axios.delete(`https://localhost:5050/delete-veiculo/${id}`).then( res => {
             alert('Deletado com sucesso')
             window.location.reload();
         }).catch( err => {
@@ -27,7 +27,7 @@ import { Link } from 'react-router-dom';
 
     useEffect(() => {
         async function loadData() {
-            await axios.get('http://localhost:5050/veiculos').then(res => {
+            await axios.get('https://localhost:5050/veiculos').then(res => {
                 setData(res.data)
             }).catch(error => console.log('Ouve um erro', error))
         }

@@ -10,7 +10,7 @@ export default function Reservas() {
 
     useEffect(()=>{
         async function loadReservas(){
-            await axios.get('http://localhost:5050/reservas').then( res =>{
+            await axios.get('https://localhost:5050/reservas').then( res =>{
                 setReservas(res.data)
                 console.log(reservas)
             }).catch( err => console.log('Error', err))
