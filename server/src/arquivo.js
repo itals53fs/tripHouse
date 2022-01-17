@@ -31,14 +31,14 @@ const write = (arq, payload) => {
     fs.writeFileSync(`${dirname}/${arq}.json`, content, 'utf8')
 }
 
-const searchIndex = (arq, id) => {
+const search = (arq, id) => {
     const content = getAll(arq)
     const index = content.findIndex(element => element.id === id)
     return index
 }
 
 const alterar= (arq, payload)=>{
-    const index = searchIndex(arq, payload.id)
+    const index = search(arq, payload.id)
     if (index > -1) {
         const content = read(arq)
         content[index] = payload
@@ -50,7 +50,7 @@ const alterar= (arq, payload)=>{
 }
 
 const remove = (arq, id) => {
-    const index = searchIndex(arq, id)
+    const index = search(arq, id)
     if (index > -1) {
         const content = read(arq)
         content.splice(index, 1)
@@ -59,6 +59,12 @@ const remove = (arq, id) => {
     }
     return "item não encontrado"
 }
+const confirme = (email, password)=>{
+    const email = search('login', password)
+    const password = search('login', email)
+
+    return password !=-1 && email!= -1
+}
 module.exports = {
 
     getAll,
@@ -66,4 +72,5 @@ module.exports = {
     read,
     remove,
     alterar,
+    confirme,
 }

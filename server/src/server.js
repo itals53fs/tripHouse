@@ -13,7 +13,8 @@ const options = {
 app.use(cors())
 app.use(router.colaboradores,
     router.clientes,
-    router.reservas)
+    router.reservas,
+    router.login)
     
 app.use(express.static(__dirname+'/'))
 https
