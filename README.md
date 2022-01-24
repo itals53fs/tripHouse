@@ -1,4 +1,10 @@
 # TripHouse
+    #Camila de Souza Ferreira
+	#Érica Cristiana dos Santos
+	#Marleison da Silva Rodrigues
+	#Tales Félix Gonçalves Cruz
+	#Ulisses Xavier Brandão
+    
 ### Frontend
 Para inicializar o Frontend da aplicação é necessariio ter o nodeJS e npm installados global<br>
 Para instalar, siga o tutorial a seguir: https://balta.io/blog/node-npm-instalacao-configuracao-e-primeiros-passos <br>
@@ -38,10 +44,9 @@ Depois execute o seguinte comando para dar start na aplicação frontend <br>
 ```
 npm start
 ```
-
 ### Gerando cerificados opnssl
 no diretorio server <br>
-tripHouse/server <br>
+tripHouse/server/certificates <br>
 
 Gerando a Chave
 ```
