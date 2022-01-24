@@ -40,7 +40,8 @@ tripHouse/server <br>
 ```
 npm i
 ```
-Depois execute o seguinte comando para dar start na aplicação frontend <br>
+Depois execute o seguinte comando para dar start na aplicação backend <br>
+tripHouse/server <br>
 ```
 npm start
 ```
