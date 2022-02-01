@@ -1,12 +1,7 @@
 # TripHouse
-    #Camila de Souza Ferreira
-	#Érica Cristiana dos Santos
-	#Marleison da Silva Rodrigues
-	#Tales Félix Gonçalves Cruz
-	#Ulisses Xavier Brandão
-    
+
 ### Frontend
-Para inicializar o Frontend da aplicação é necessariio ter o nodeJS e npm installados global<br>
+Para inicializar o Frontend e backend da aplicação é necessariio ter o nodeJS e npm installados global<br>
 Para instalar, siga o tutorial a seguir: https://balta.io/blog/node-npm-instalacao-configuracao-e-primeiros-passos <br>
 
 Após ter o Node instalado clone nosso diretorio, para ter o código na sua maquina <br>
