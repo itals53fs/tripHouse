@@ -23,14 +23,14 @@ export default function Login() {
             window.location.href = "https://localhost:3000/reservas" */
         }).catch( err => console.log('Error',err ))
 
-       /* if(email === 'admin@triphouse.com' && password === 'admin'){
+        if(email === 'admin@triphouse.com' && password === 'admin'){
             localStorage.setItem('login', 'admin')
             window.location.href = "http://localhost:3000/reservas"
         }
         else{
             localStorage.setItem('login', 'colaborador')
             window.location.href = "http://localhost:3000/reservas"
-        }*/
+        }
        } 
     }
 
